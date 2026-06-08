@@ -1717,7 +1717,8 @@ a {
 
   .card-grid,
   .wide-card-grid,
-  .small-card-grid,
+  .food-section .card-grid,
+    .small-card-grid,
   .playlist-grid,
   .reflection-list {
     grid-template-columns: 1fr;
