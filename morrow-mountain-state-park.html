@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Morrow Mountain State Park | Joasility</title>
+    <meta
+      name="description"
+      content="A quiet Joasility weekend journey from Morrow Mountain State Park in North Carolina."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#home" aria-label="Joasility home"><span class="brand-mark">J</span><span>Joasility</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html#home">Home</a><a href="index.html#journeys">Journeys</a><a href="index.html#nature">Nature & Wildlife</a><a href="index.html#movement">Movement</a><a href="index.html#nutrition">Nutrition</a><a href="index.html#reflections">Reflections</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="archive-page journey-detail">
+      <section class="section journey-detail-hero journey-detail-intro" aria-labelledby="morrow-mountain-title">
+        <article class="journey-detail-copy">
+          <p class="eyebrow">Weekend Escape</p>
+          <h1 id="morrow-mountain-title">Morrow Mountain State Park</h1>
+          <p>
+            A simple weekend walk in North Carolina, shaped by forest paths, movement, and the
+            kind of quiet that makes the day feel slower.
+          </p>
+          <div class="recipe-badges" aria-label="Journey details">
+            <span>Morrow Mountain</span>
+            <span>North Carolina</span>
+            <span>Trail Walk</span>
+          </div>
+          <div class="journey-actions journey-view-tabs" role="tablist" aria-label="Morrow Mountain views">
+            <button
+              class="button primary is-active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="watch-video"
+              data-journey-view-button="watch-video"
+            >Watch Video</button>
+            <button
+              class="button secondary"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="read-the-journey"
+              data-journey-view-button="read-the-journey"
+            >Read the Journey</button>
+          </div>
+        </article>
+      </section>
+
+      <section
+        class="section journey-section journey-view-panel is-active"
+        id="watch-video"
+        role="tabpanel"
+        aria-labelledby="watch-video-title"
+        data-journey-view-panel="watch-video"
+      >
+        <div class="section-heading">
+          <p class="eyebrow">Watch Video</p>
+          <h2 id="watch-video-title">A short moment from the trail.</h2>
+          <p>
+            A quick glimpse from Morrow Mountain, saved as a small weekend note in motion.
+          </p>
+        </div>
+        <div class="journey-video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/iCBdxmkMMhc"
+            title="Morrow Mountain State Park YouTube Short"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section
+        class="section journey-section journey-view-panel"
+        id="read-the-journey"
+        role="tabpanel"
+        aria-labelledby="read-journey-title"
+        data-journey-view-panel="read-the-journey"
+        hidden
+      >
+        <div class="section-heading">
+          <p class="eyebrow">Read the Journey</p>
+          <h2 id="read-journey-title">A small reset at Morrow Mountain.</h2>
+        </div>
+        <div class="morrow-story">
+          <figure class="morrow-story-hero">
+            <img src="assets/images/morrow-overlook-panorama.jpg" alt="Panoramic overlook view from Morrow Mountain State Park." />
+          </figure>
+
+          <div class="morrow-story-intro">
+            <p>I like places that do not try too hard to impress.</p>
+            <p>Morrow Mountain is one of them.</p>
+          </div>
+
+          <div class="morrow-story-row">
+            <figure class="morrow-story-photo morrow-story-photo-tall">
+              <img src="assets/images/morrow-trail.jpg" alt="Rocky forest trail at Morrow Mountain State Park." />
+            </figure>
+            <article class="morrow-story-copy">
+              <p>
+                A rocky trail through the forest, a strange tree covered with huge growths, and a
+                viewpoint overlooking miles of North Carolina woodland.
+              </p>
+              <p>Nothing dramatic. Nothing crowded.</p>
+            </article>
+          </div>
+
+          <div class="morrow-story-mosaic">
+            <figure class="morrow-story-photo">
+              <img src="assets/images/morrow-tree.jpg" alt="Unusual tree with large growths and knots along the trail." />
+            </figure>
+            <figure class="morrow-story-photo morrow-story-photo-person">
+              <img src="assets/images/morrow-joanna-overlook.jpg" alt="Joanna standing at the overlook with a camera." />
+            </figure>
+          </div>
+
+          <article class="morrow-story-ending">
+            <p>
+              Just a few hours outside, moving, exploring, and paying attention to small things
+              that are easy to miss when life gets busy.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="section detail-back-row" aria-label="Back navigation">
+        <a class="text-link" href="weekend-escapes.html">&larr; Back to Weekend Escapes</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="copyright-line">&copy; <span data-current-year></span> Joasility</p>
+      <p class="copyright-note">
+        All photographs, videos, travel journals, and articles featured on this site are original
+        creations unless otherwise credited. Please do not reuse or republish content without permission.
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

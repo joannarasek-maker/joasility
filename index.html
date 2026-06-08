@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Joasility | Life in Motion</title>
+    <meta
+      name="description"
+      content="Joasility is a personal lifestyle journal documenting journeys, nature, wildlife, simple food, movement, and reflections from around the world."
+    />
+    <meta property="og:title" content="Joasility | Life in Motion" />
+    <meta
+      property="og:description"
+      content="Exploring journeys, nature, movement, and simple living."
+    />
+    <meta property="og:image" content="assets/joasility-bridge-hero-web.jpg" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Joasility home">
+        <span class="brand-mark">J</span>
+        <span>Joasility</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#journeys">Journeys</a>
+        <a href="#nature">Nature & Wildlife</a>
+        <a href="#movement">Movement</a>
+        <a href="#nutrition">Nutrition</a>
+        <a href="#reflections">Reflections</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-label="Joasility hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-kicker">Life in Motion</p>
+          <h1>JOASILITY</h1>
+          <p class="hero-keywords">Travel &bull; Nature &bull; Movement &bull; Curiosity</p>
+          <p>Exploring journeys, nature, movement, and simple living.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#journeys">Explore Journeys</a>
+            <a
+              class="button secondary"
+              href="https://www.youtube.com/@JoasilityLiving"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Watch Joasility Living on YouTube"
+            >
+              Explore Videos
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band" aria-labelledby="intro-title">
+        <div class="intro-copy">
+          <p class="eyebrow">Travel. Nature. Curiosity.</p>
+          <h2 id="intro-title">A personal exploration project with journeys at the center.</h2>
+        </div>
+        <p>
+          Joasility follows paths near and far: quiet local walks, mountain weekends, larger
+          travel stories, wildlife observations, simple meals, movement, and reflections from
+          life outdoors.
+        </p>
+      </section>
+
+      <section class="section" id="journeys" aria-labelledby="journeys-title">
+        <div class="section-heading">
+          <p class="eyebrow">Journeys</p>
+          <h2 id="journeys-title">The heart of Joasility.</h2>
+          <p>
+            Three paths of exploration: local walks, weekend escapes, and journeys farther afield.
+          </p>
+        </div>
+        <div class="journey-category-grid" id="journey-categories"></div>
+      </section>
+
+      <section class="section playlist-section" id="playlists" aria-labelledby="playlists-title">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">YouTube Playlists</p>
+          <h2 id="playlists-title">Watch by theme.</h2>
+          <p>
+            Video collections organized around Joasility journeys, movement, nature, food, and
+            future stories.
+          </p>
+        </div>
+        <div class="playlist-grid" id="youtube-playlists"></div>
+      </section>
+
+      <section class="section nature-section" id="nature" aria-labelledby="nature-title">
+        <div class="section-heading">
+          <p class="eyebrow">Nature & Wildlife</p>
+          <h2 id="nature-title">Encounters with the small, wild, and easily missed.</h2>
+          <p>
+            Birds, plants, insects, reptiles, ecosystems, and quiet observations from walks,
+            trails, parks, and travel days.
+          </p>
+        </div>
+        <div class="wide-card-grid" id="nature-grid"></div>
+        <div class="section-link-row" id="nature-all-link"></div>
+      </section>
+
+      <section class="section quieter-section" id="movement" aria-labelledby="movement-title">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Movement</p>
+          <h2 id="movement-title">Movement as part of an active life.</h2>
+          <p>
+            Yoga, mobility, fitness, senior-friendly movement, and everyday activity that
+            supports travel, walking, and feeling at home in the body.
+          </p>
+        </div>
+        <div class="small-card-grid" id="movement-grid"></div>
+        <div class="section-link-row" id="movement-all-link"></div>
+      </section>
+
+      <section class="section food-section" id="nutrition" aria-labelledby="nutrition-title">
+        <div class="section-heading">
+          <p class="eyebrow">Nutrition</p>
+          <h2 id="nutrition-title">Simple food for days in motion.</h2>
+          <p>
+            Practical meals, homemade food, trail-friendly ideas, and recipes that fit active,
+            curious living.
+          </p>
+        </div>
+        <div class="card-grid" id="recipes-grid"></div>
+        <div class="section-link-row" id="recipes-all-link"></div>
+      </section>
+
+      <section class="section reflections-section" id="reflections" aria-labelledby="reflections-title">
+        <div class="section-heading">
+          <p class="eyebrow">Reflections</p>
+          <h2 id="reflections-title">Thoughts gathered along the way.</h2>
+          <p>Short essays, travel reflections, nature notes, observations, and life philosophy.</p>
+        </div>
+        <div class="wide-card-grid" id="reflections-list"></div>
+        <div class="section-link-row" id="reflections-all-link"></div>
+      </section>
+
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="about-photo">
+          <img
+            src="assets/images/about-waterfall.jpg"
+            alt="Joanna smiling with raised arms in front of a waterfall."
+            loading="lazy"
+          />
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">Hi, I'm Joanna.</h2>
+          <p>
+            I spent most of my life in Poland before moving to North Carolina in my fifties.
+          </p>
+          <p>
+            I enjoy traveling, hiking, cycling, diving, photography and spending time in nature. Over the years I have explored more than 30 countries, from mountain trails and deserts to historic cities and remote places far from the usual tourist routes.
+          </p>
+          <p>
+            Joasility is where I collect some of those experiences through photos, videos and notes.
+          </p>
+          <p>
+            You will also find movement, simple recipes and everyday moments that help me stay healthy and active. Not because fitness is the goal, but because I want to keep exploring the world for as long as possible.
+          </p>
+          <p>
+            I am not trying to be an expert, influencer or travel guide.
+          </p>
+          <p>
+            I am simply sharing things I find interesting, beautiful, useful or worth remembering.
+          </p>
+          <p>
+            If any of it inspires someone to go for a walk, take a trip, try something new or look a little closer at the world around them, that's a nice bonus.
+          </p>
+          <p>
+            Welcome to Joasility.
+          </p>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Follow the journey.</h2>
+          <p>
+            For questions, collaborations, or a simple hello, reach out by email or connect on
+            social media.
+          </p>
+          <a class="email-link" href="mailto:joasility@gmail.com">joasility@gmail.com</a>
+          <div class="social-links" aria-label="Social media links">
+            <a
+              href="https://www.youtube.com/@JoasilityLiving"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Joasility Living on YouTube"
+            >
+              <span aria-hidden="true">Y</span> YouTube
+            </a>
+            <a
+              href="https://www.instagram.com/joasility/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Joasility on Instagram"
+            >
+              <span aria-hidden="true">I</span> Instagram
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61589380720830"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Joasility on Facebook"
+            >
+              <span aria-hidden="true">f</span> Facebook
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" aria-label="Contact form">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="Write a short note"></textarea>
+          </label>
+          <button class="button primary" type="button">Send message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="copyright-line">&copy; <span data-current-year></span> Joasility</p>
+      <p class="copyright-note">
+        All photographs, videos, travel journals, and articles featured on this site are original
+        creations unless otherwise credited. Please do not reuse or republish content without permission.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
