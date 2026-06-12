@@ -1,8 +1,8 @@
 const aFewMinutesOfMovement = {
   title: "A Few Minutes of Movement",
   description:
-    "Movement keeps us strong, capable, and ready for everyday adventures. A few moments from today's Senior Fitness class, filled with energy, strength, and determination. Life in Motion.",
-  image: "assets/images/a-few-minutes-of-movement-thumbnail.svg",
+    "A few moments from today's Senior Fitness class, filled with energy, strength, and determination. Life in Motion.",
+  image: "https://img.youtube.com/vi/pY5B-mSJ2wE/hqdefault.jpg",
   cardUrl: "a-few-minutes-of-movement.html",
   videoUrl: "https://www.youtube.com/shorts/pY5B-mSJ2wE",
   videoActionUrl: "a-few-minutes-of-movement.html",
