@@ -1,0 +1,50 @@
+.contact-section {
+  padding-block: clamp(36px, 5vw, 56px);
+}
+
+.contact-content {
+  max-width: 980px;
+}
+
+.contact-section p:not(.eyebrow) {
+  max-width: 680px;
+}
+
+.email-link {
+  margin: 12px 0 14px;
+}
+
+.social-links {
+  flex-wrap: nowrap;
+  gap: 10px;
+  width: min(100%, 860px);
+  margin-top: 2px;
+}
+
+.social-links a {
+  flex: 0 1 auto;
+  min-height: 42px;
+  padding: 0 12px;
+  white-space: nowrap;
+}
+
+.social-links span {
+  width: 22px;
+  height: 22px;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 640px) {
+  .contact-section {
+    padding-block: 42px;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .social-links a {
+    flex: 1 1 170px;
+  }
+}
