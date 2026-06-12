@@ -780,8 +780,7 @@ a {
 }
 
 .content-card,
-.reflection-card,
-.contact-form {
+.reflection-card {
   overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -1483,8 +1482,7 @@ a {
   font-weight: 800;
 }
 
-.about-section,
-.contact-section {
+.about-section {
   display: grid;
   grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
   gap: clamp(24px, 5vw, 64px);
@@ -1516,17 +1514,32 @@ a {
 }
 
 .contact-section {
+  display: block;
   width: 100%;
   max-width: none;
+  padding-block: clamp(58px, 8vw, 82px);
   padding-inline: max(18px, calc((100% - var(--max)) / 2));
   background: var(--forest-dark);
   color: #fff;
+  text-align: center;
+}
+
+.contact-content {
+  display: grid;
+  max-width: 760px;
+  margin-inline: auto;
+  justify-items: center;
 }
 
 .contact-section .eyebrow,
 .contact-section p,
 .contact-section .email-link {
   color: rgba(255, 253, 248, 0.86);
+}
+
+.contact-section p:not(.eyebrow) {
+  max-width: 620px;
+  margin-inline: auto;
 }
 
 .email-link {
@@ -1538,15 +1551,19 @@ a {
 .social-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 4px;
 }
 
 .social-links a {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  min-height: 40px;
-  padding: 0 12px;
+  min-height: 44px;
+  padding: 0 14px;
   color: var(--forest-dark);
   background: var(--sand-soft);
   border-radius: var(--radius);
@@ -1564,34 +1581,6 @@ a {
   border-radius: 50%;
   font-size: 0.82rem;
   line-height: 1;
-}
-
-.contact-form {
-  display: grid;
-  gap: 14px;
-  padding: 22px;
-  color: var(--ink);
-}
-
-.contact-form label {
-  display: grid;
-  gap: 7px;
-  font-weight: 900;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px 13px;
-  color: var(--ink);
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  font: inherit;
-}
-
-.contact-form textarea {
-  resize: vertical;
 }
 
 .site-footer {
@@ -1743,5 +1732,9 @@ a {
 
   .site-footer {
     padding-inline: 18px;
+  }
+
+  .social-links a {
+    flex: 1 1 170px;
   }
 }
