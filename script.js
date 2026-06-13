@@ -10,7 +10,7 @@ const huntersvilleWildlifeWalk = {
   title: "Wildlife on a Local Walk in Huntersville",
   location: "Huntersville, NC",
   description:
-    "A quiet local walk in Huntersville turned into a small wildlife encounter — a snake, a turtle, a spider, and a few unexpected moments in everyday nature.",
+    "A quiet local walk in Huntersville turned into a small wildlife encounter â€” a snake, a turtle, a spider, and a few unexpected moments in everyday nature.",
   image: "https://img.youtube.com/vi/AGTCQ5xCtGM/hqdefault.jpg",
   cardUrl: "wildlife-local-walk-huntersville.html",
   videoUrl: "https://www.youtube.com/shorts/AGTCQ5xCtGM",
@@ -59,9 +59,9 @@ const journeyCategoriesData = [
         date: "2026-06-01",
       },
       {
-        title: "Błatnia, Beskid Śląski",
-        location: "Błatnia, Poland",
-        description: "A short travel video from a peaceful mountain escape in Beskid Śląski.",
+        title: "BĹ‚atnia, Beskid ĹšlÄ…ski",
+        location: "BĹ‚atnia, Poland",
+        description: "A short travel video from a peaceful mountain escape in Beskid ĹšlÄ…ski.",
         image: "https://img.youtube.com/vi/WbWlNZ4yfks/hqdefault.jpg",
         pageUrl: "blatnia-beskid-slaski.html",
         cardUrl: "blatnia-beskid-slaski.html?view=video",
@@ -70,8 +70,8 @@ const journeyCategoriesData = [
         videoActionUrl: "blatnia-beskid-slaski.html?view=video",
         pageActionLabel: "Read the Journey",
         videoActionLabel: "Watch Video",
-        cardAriaLabel: "Open Błatnia, Beskid Śląski journey",
-        tags: ["Weekend Escape", "Beskid Śląski", "Poland", "Short Video"],
+        cardAriaLabel: "Open BĹ‚atnia, Beskid ĹšlÄ…ski journey",
+        tags: ["Weekend Escape", "Beskid ĹšlÄ…ski", "Poland", "Short Video"],
         dateLabel: "June 2009",
         date: "2009-06-01",
       },
@@ -173,7 +173,7 @@ const homepageCategoryData = {
   nutrition: {
     title: "Nutrition",
     description: "Simple food, practical meals, homemade recipes, and trail-friendly ideas.",
-    image: "assets/images/nutrition-breakfast-upright.jpg",
+    image: "assets/images/millet-breakfast-bowl.jpg",
     archiveUrl: "nutrition.html",
     tags: ["Simple Food", "Recipes", "Quick Meals", "Homemade"],
   },
@@ -238,7 +238,7 @@ function tagsTemplate(tags = []) {
 function metadataTemplate(item) {
   const label = item.location || item.category || "";
   const date = item.dateLabel || (item.date ? formatDate(item.date) : "");
-  return [label, date].filter(Boolean).join(" · ");
+  return [label, date].filter(Boolean).join(" Â· ");
 }
 
 function cardTemplate(item) {
@@ -333,7 +333,7 @@ function renderCategoryArchive() {
 function reflectionTemplate(item) {
   const readingTime = item.readingTime ? `<span>${item.readingTime}</span>` : "";
   const metaText = metadataTemplate(item);
-  const meta = [metaText, readingTime].filter(Boolean).join(" · ");
+  const meta = [metaText, readingTime].filter(Boolean).join(" Â· ");
   const image = item.image
     ? `<div class="reflection-card-image">${item.pageUrl ? `<a class="card-image-link" href="${item.pageUrl}" aria-label="Read ${item.title}"><img src="${item.image}" alt="${item.title}" loading="lazy"></a>` : `<img src="${item.image}" alt="${item.title}" loading="lazy">`}</div>`
     : "";
