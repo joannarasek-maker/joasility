@@ -49,11 +49,13 @@
         }
       }
 
-      .category-gateway-card.movement .card-image img {
+      .category-gateway-card.movement .card-image img,
+      #youtube-playlists .playlist-card:nth-child(2) .playlist-thumbnail img {
         object-position: 54% 52%;
       }
 
-      .category-gateway-card.nutrition .card-image img {
+      .category-gateway-card.nutrition .card-image img,
+      #youtube-playlists .playlist-card:nth-child(4) .playlist-thumbnail img {
         object-position: 58% 54%;
       }
     </style>
@@ -260,6 +262,8 @@
         const images = {
           "#movement-grid .category-gateway-card.movement .card-image img": "assets/images/IMG-20231007-WA0002.jpg",
           "#recipes-grid .category-gateway-card.nutrition .card-image img": "assets/images/sniadanie.png",
+          "#youtube-playlists .playlist-card:nth-child(2) .playlist-thumbnail img": "assets/images/IMG-20231007-WA0002.jpg",
+          "#youtube-playlists .playlist-card:nth-child(4) .playlist-thumbnail img": "assets/images/sniadanie.png",
         };
 
         const applyCategoryImages = () => {
