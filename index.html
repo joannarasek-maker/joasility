@@ -17,6 +17,25 @@
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="styles.css?v=20260608-nutrition-card-mobile" />
     <link rel="stylesheet" href="contact-compact.css?v=20260612" />
+    <style>
+      @media (min-width: 981px) {
+        #movement {
+          width: min(1320px, calc(100% - 36px));
+        }
+
+        #movement-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        #movement-grid .category-gateway-card.movement {
+          min-height: clamp(560px, 54vw, 700px);
+        }
+      }
+
+      .category-gateway-card.movement .card-image img {
+        object-position: 54% 52%;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -215,5 +234,20 @@
 
     <script src="script.js?v=20260608-nutrition-card-mobile"></script>
     <script src="script-fix.js?v=20260613-millet-fix"></script>
+    <script>
+      (() => {
+        const movementImage = "assets/images/IMG-20231007-WA0002.jpg";
+        const applyMovementImage = () => {
+          const image = document.querySelector("#movement-grid .category-gateway-card.movement .card-image img");
+          if (image) image.src = movementImage;
+        };
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", applyMovementImage);
+        } else {
+          applyMovementImage();
+        }
+      })();
+    </script>
   </body>
 </html>
