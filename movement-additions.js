@@ -15,7 +15,7 @@ const aFewMinutesOfMovement = {
 if (typeof movementData !== "undefined") {
   const morningMobilityFlow = movementData.find((item) => item.videoUrl === "https://www.youtube.com/shorts/ro2uybn-WdQ");
   if (morningMobilityFlow) {
-    morningMobilityFlow.image = "assets/images/morning-mobility-flow-custom-thumbnail.png";
+    morningMobilityFlow.image = "assets/images/morning-mobility-flow-thumbnail.png";
   }
 
   if (!movementData.some((item) => item.videoUrl === aFewMinutesOfMovement.videoUrl)) {
