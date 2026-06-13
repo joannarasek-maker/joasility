@@ -19,21 +19,42 @@
     <link rel="stylesheet" href="contact-compact.css?v=20260612" />
     <style>
       @media (min-width: 981px) {
+        #journeys,
         #movement {
           width: min(1320px, calc(100% - 36px));
         }
 
-        #movement-grid {
+        #nature,
+        #nutrition {
+          padding-inline: max(18px, calc((100% - 1320px) / 2));
+        }
+
+        .nature-section .wide-card-grid,
+        #movement-grid,
+        #recipes-grid {
           grid-template-columns: minmax(0, 1fr);
         }
 
-        #movement-grid .category-gateway-card.movement {
-          min-height: clamp(560px, 54vw, 700px);
+        .journey-category,
+        .category-gateway-card.nature-notes,
+        .category-gateway-card.movement,
+        .category-gateway-card.nutrition {
+          min-height: clamp(520px, 44vw, 620px);
+        }
+
+        #nature-grid .category-gateway-card.nature-notes,
+        #movement-grid .category-gateway-card.movement,
+        #recipes-grid .category-gateway-card.nutrition {
+          min-height: clamp(560px, 48vw, 680px);
         }
       }
 
       .category-gateway-card.movement .card-image img {
         object-position: 54% 52%;
+      }
+
+      .category-gateway-card.nutrition .card-image img {
+        object-position: 58% 54%;
       }
     </style>
   </head>
@@ -236,16 +257,22 @@
     <script src="script-fix.js?v=20260613-millet-fix"></script>
     <script>
       (() => {
-        const movementImage = "assets/images/IMG-20231007-WA0002.jpg";
-        const applyMovementImage = () => {
-          const image = document.querySelector("#movement-grid .category-gateway-card.movement .card-image img");
-          if (image) image.src = movementImage;
+        const images = {
+          "#movement-grid .category-gateway-card.movement .card-image img": "assets/images/IMG-20231007-WA0002.jpg",
+          "#recipes-grid .category-gateway-card.nutrition .card-image img": "assets/images/sniadanie.png",
+        };
+
+        const applyCategoryImages = () => {
+          Object.entries(images).forEach(([selector, source]) => {
+            const image = document.querySelector(selector);
+            if (image) image.src = source;
+          });
         };
 
         if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", applyMovementImage);
+          document.addEventListener("DOMContentLoaded", applyCategoryImages);
         } else {
-          applyMovementImage();
+          applyCategoryImages();
         }
       })();
     </script>
