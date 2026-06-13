@@ -3,7 +3,7 @@ const milletBreakfastBowlRecipe = {
   title: "Millet Breakfast Bowl",
   description:
     "A nourishing and satisfying breakfast made with millet, high-protein fat-free skyr, blueberries, walnuts, and dried cranberries. A simple breakfast that is both filling and nutrient-dense.",
-  image: "assets/images/millet-breakfast-bowl.svg?v=20260613-fix",
+  image: "assets/images/20260611_074141.jpg",
   pageUrl: "millet-breakfast-bowl.html?view=recipe",
   cardUrl: "millet-breakfast-bowl.html?view=recipe",
   pageActionUrl: "millet-breakfast-bowl.html?view=recipe",
