@@ -12,7 +12,15 @@ const aFewMinutesOfMovement = {
   date: "2026-06-12",
 };
 
-if (typeof movementData !== "undefined" && !movementData.some((item) => item.videoUrl === aFewMinutesOfMovement.videoUrl)) {
-  movementData.unshift(aFewMinutesOfMovement);
+if (typeof movementData !== "undefined") {
+  const morningMobilityFlow = movementData.find((item) => item.videoUrl === "https://www.youtube.com/shorts/ro2uybn-WdQ");
+  if (morningMobilityFlow) {
+    morningMobilityFlow.image = "assets/images/morning-mobility-flow-custom-thumbnail.png";
+  }
+
+  if (!movementData.some((item) => item.videoUrl === aFewMinutesOfMovement.videoUrl)) {
+    movementData.unshift(aFewMinutesOfMovement);
+  }
+
   renderCategoryArchive();
 }
