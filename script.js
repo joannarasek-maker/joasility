@@ -29,6 +29,23 @@ const journeyCategoriesData = [
     archiveUrl: "local-walks.html",
     tags: ["Local Walks", "Parks", "Lakes", "Everyday Nature"],
     items: [
+      {
+        title: "A Bike Ride at Cowans Ford Wildlife Refuge",
+        location: "Cowans Ford Wildlife Refuge, NC",
+        description:
+          "This peaceful ride takes us through forest trails, wetlands, and scenic views along Lake Norman. A reminder that some of the best outdoor adventures can be found close to home.",
+        image: "https://img.youtube.com/vi/VRagX7O4s1Q/hqdefault.jpg",
+        pageUrl: "cowans-ford-wildlife-refuge-bike-ride.html",
+        cardUrl: "cowans-ford-wildlife-refuge-bike-ride.html?view=journey",
+        pageActionUrl: "cowans-ford-wildlife-refuge-bike-ride.html?view=journey",
+        videoUrl: "https://www.youtube.com/shorts/VRagX7O4s1Q",
+        pageActionLabel: "Read the Journey",
+        videoActionLabel: "Watch Video",
+        cardAriaLabel: "Open A Bike Ride at Cowans Ford Wildlife Refuge journey",
+        tags: ["Local Walk", "Bike Ride", "Cowans Ford", "Lake Norman"],
+        dateLabel: "June 2026",
+        date: "2026-06-15",
+      },
       huntersvilleWildlifeWalk,
     ],
   },
