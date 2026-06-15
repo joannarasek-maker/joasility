@@ -39,6 +39,7 @@ const journeyCategoriesData = [
         cardUrl: "cowans-ford-wildlife-refuge-bike-ride.html?view=journey",
         pageActionUrl: "cowans-ford-wildlife-refuge-bike-ride.html?view=journey",
         videoUrl: "https://www.youtube.com/shorts/VRagX7O4s1Q",
+        videoActionUrl: "cowans-ford-wildlife-refuge-bike-ride.html?view=video",
         pageActionLabel: "Read the Journey",
         videoActionLabel: "Watch Video",
         cardAriaLabel: "Open A Bike Ride at Cowans Ford Wildlife Refuge journey",
