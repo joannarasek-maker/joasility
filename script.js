@@ -10,7 +10,7 @@ const huntersvilleWildlifeWalk = {
   title: "Wildlife on a Local Walk in Huntersville",
   location: "Huntersville, NC",
   description:
-    "A quiet local walk in Huntersville turned into a small wildlife encounter â€” a snake, a turtle, a spider, and a few unexpected moments in everyday nature.",
+    "A quiet local walk in Huntersville turned into a small wildlife encounter — a snake, a turtle, a spider, and a few unexpected moments in everyday nature.",
   image: "https://img.youtube.com/vi/AGTCQ5xCtGM/hqdefault.jpg",
   cardUrl: "wildlife-local-walk-huntersville.html",
   videoUrl: "https://www.youtube.com/shorts/AGTCQ5xCtGM",
@@ -238,7 +238,7 @@ function tagsTemplate(tags = []) {
 function metadataTemplate(item) {
   const label = item.location || item.category || "";
   const date = item.dateLabel || (item.date ? formatDate(item.date) : "");
-  return [label, date].filter(Boolean).join(" Â· ");
+  return [label, date].filter(Boolean).join(" · ");
 }
 
 function cardTemplate(item) {
@@ -333,7 +333,7 @@ function renderCategoryArchive() {
 function reflectionTemplate(item) {
   const readingTime = item.readingTime ? `<span>${item.readingTime}</span>` : "";
   const metaText = metadataTemplate(item);
-  const meta = [metaText, readingTime].filter(Boolean).join(" Â· ");
+  const meta = [metaText, readingTime].filter(Boolean).join(" · ");
   const image = item.image
     ? `<div class="reflection-card-image">${item.pageUrl ? `<a class="card-image-link" href="${item.pageUrl}" aria-label="Read ${item.title}"><img src="${item.image}" alt="${item.title}" loading="lazy"></a>` : `<img src="${item.image}" alt="${item.title}" loading="lazy">`}</div>`
     : "";
