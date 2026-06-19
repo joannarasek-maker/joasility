@@ -39,6 +39,34 @@ if (typeof archiveCollections !== "undefined") {
   archiveCollections.nutrition = recipesData;
 }
 
+if (
+  typeof journeyCategoriesData !== "undefined" &&
+  typeof natureData !== "undefined" &&
+  Array.isArray(journeyCategoriesData) &&
+  Array.isArray(natureData)
+) {
+  const localWalks = journeyCategoriesData.find((category) => category.title === "Local Walks");
+  const cowansFordCard = localWalks?.items?.find(
+    (item) => item.title === "A Bike Ride at Cowans Ford Wildlife Refuge"
+  );
+
+  if (cowansFordCard && !natureData.some((item) => item.title === cowansFordCard.title)) {
+    natureData.unshift(cowansFordCard);
+  }
+
+  if (typeof archiveCollections !== "undefined") {
+    archiveCollections["nature-wildlife"] = natureData;
+  }
+}
+
+if (document.getElementById("nature-grid") && typeof renderCards === "function") {
+  renderCards("nature-grid", newestItems(natureData, 3));
+  const natureLinkTarget = document.getElementById("nature-all-link");
+  if (natureLinkTarget) {
+    natureLinkTarget.innerHTML = `<a class="category-all-link" href="nature-wildlife.html">View all Nature & Wildlife &rarr;</a>`;
+  }
+}
+
 if (document.getElementById("recipes-grid") && typeof renderHomepageCategory === "function") {
   renderHomepageCategory("recipes-grid", homepageCategoryData.nutrition, "recipes-all-link");
 }
