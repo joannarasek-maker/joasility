@@ -22,7 +22,7 @@ const southernFranceJourney = {
   location: "Southern France",
   description:
     "A short travel memory from Pont d'Arc, Nîmes, and Avignon — natural beauty, old stone streets, gardens, and a few places worth remembering.",
-  image: "https://img.youtube.com/vi/YS4r-pkGBzQ/hqdefault.jpg",
+  image: "assets/images/Pont d'Arc.JPG",
   pageUrl: "adventure.html?story=southern-france&view=journey",
   cardUrl: "adventure.html?story=southern-france&view=video",
   pageActionUrl: "adventure.html?story=southern-france&view=journey",
@@ -52,7 +52,7 @@ function renderSouthernFranceDetail() {
     <article class="journey-detail-copy">
       <p class="eyebrow">Adventure</p>
       <h1>Southern France</h1>
-      <p>A short travel memory from Pont d'Arc, Nîmes, and Avignon — a route shaped by natural stone arches, elegant gardens, historic streets, and warm summer light.</p>
+      <p>A family road trip from Poland through Germany to Southern France — with two children, a stroller, a tent, and a few places that stayed in memory long after the drive home.</p>
       <div class="recipe-badges" aria-label="Journey details"><span>Pont d'Arc</span><span>Nîmes</span><span>Avignon</span><span>July 2014</span></div>
       <div class="journey-actions journey-view-tabs" role="tablist" aria-label="Southern France journey views">
         <button class="button primary is-active" type="button" role="tab" data-journey-view-button="watch-video">Watch Video</button>
@@ -76,10 +76,18 @@ function renderSouthernFranceDetail() {
   readPanel.dataset.journeyViewPanel = "read-the-journey";
   readPanel.hidden = true;
   readPanel.innerHTML = `
-    <div class="section-heading"><p class="eyebrow">Read the Journey</p><h2>A few remembered places in Southern France.</h2></div>
+    <div class="section-heading"><p class="eyebrow">Read the Journey</p><h2>A summer road trip, remembered in small pieces.</h2></div>
     <div class="morrow-story">
-      <div class="morrow-story-intro"><p>This short memory brings together three places from Southern France: Pont d'Arc, Nîmes, and Avignon.</p><p>Pont d'Arc was the wild, open part of the trip — water, cliffs, canoes, and the huge natural arch rising above the Ardèche River.</p></div>
-      <article class="morrow-story-ending"><p>Nîmes felt quieter and greener, with garden paths, stone terraces, and shaded places that made the city feel almost hidden inside the landscape.</p><p>Avignon added history and scale: old streets, open squares, and the strong stone walls of the Palais des Papes.</p><p>Together, they became one small summer note from a journey where nature and history met in the same frame.</p><p><strong>Life in Motion.</strong></p></article>
+      <figure class="morrow-story-hero"><img src="assets/images/Pont d'Arc.JPG" alt="Pont d'Arc natural arch over the Ardèche River in Southern France." /></figure>
+      <div class="morrow-story-intro"><p>In 2014, we packed the car in Poland and drove south through Germany toward France. It was not a light version of travel: two children, ages ten and three, camping gear, and a stroller that still had to come with us almost everywhere.</p><p>Pont d'Arc felt like the wild part of the trip. The natural arch was impressive, but what stayed with me was the river, the cliffs, and the feeling that after many hours on the road we had reached a completely different rhythm.</p></div>
+      <figure class="morrow-story-hero"><img src="assets/images/ogród.jpg" alt="Shaded garden terrace in Nîmes, France." /></figure>
+      <article class="morrow-story-ending"><p>Nîmes gave us shade, stone terraces, green paths, and the kind of pauses that happen naturally when you travel with children. You stop for water, for snacks, for tired legs, and sometimes those stops become the part you remember best.</p></article>
+      <div class="morrow-story-row"><figure class="morrow-story-photo morrow-story-photo-tall"><img src="assets/images/uliczka.JPG" alt="Busy sunlit street with cafés in Southern France." /></figure><article class="morrow-story-copy"><p>Southern French streets have their own pace. Cafés spill into narrow spaces, people sit close together, and the city feels less like a checklist and more like something you slowly pass through, stroller wheels and all.</p></article></div>
+      <div class="morrow-story-row"><article class="morrow-story-copy"><p>Avignon is known for its papal history, but what I remember most is not only the Palace of the Popes. The city felt alive with artists, street performers, small markets, cafés, and people gathering in public squares.</p></article><figure class="morrow-story-photo"><img src="assets/images/Palais des Papes.JPG" alt="The Palais des Papes in Avignon, France." /></figure></div>
+      <figure class="morrow-story-hero"><img src="assets/images/widok na plac.JPG" alt="View over a square in Avignon, France." /></figure>
+      <article class="morrow-story-ending"><p>From above, Avignon looked historic and theatrical at the same time: old walls and rooftops, but also umbrellas, conversations, movement, and daily life happening below.</p></article>
+      <figure class="morrow-story-hero"><img src="assets/images/panorama rzeki.JPG" alt="Panoramic view of the Rhône River near Avignon." /></figure>
+      <article class="morrow-story-ending"><p>Looking back, this trip was not about seeing everything perfectly. It was about driving, camping, carrying bags, pushing the stroller over old stones, and discovering that family travel is rarely smooth — but often memorable because of that.</p><p><strong>Life in Motion.</strong></p></article>
     </div>`;
 
   const back = document.createElement("section");
