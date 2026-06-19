@@ -59,12 +59,13 @@ if (
   }
 }
 
-if (document.getElementById("nature-grid") && typeof renderCards === "function") {
-  renderCards("nature-grid", newestItems(natureData, 3));
-  const natureLinkTarget = document.getElementById("nature-all-link");
-  if (natureLinkTarget) {
-    natureLinkTarget.innerHTML = `<a class="category-all-link" href="nature-wildlife.html">View all Nature & Wildlife &rarr;</a>`;
-  }
+if (
+  document.getElementById("nature-grid") &&
+  typeof renderHomepageCategory === "function" &&
+  typeof homepageCategoryData !== "undefined" &&
+  homepageCategoryData.nature
+) {
+  renderHomepageCategory("nature-grid", homepageCategoryData.nature, "nature-all-link");
 }
 
 if (document.getElementById("recipes-grid") && typeof renderHomepageCategory === "function") {
