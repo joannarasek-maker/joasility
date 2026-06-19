@@ -21,7 +21,7 @@ const southernFranceJourney = {
   title: "Southern France | Nature, History & Hidden Gems",
   location: "Southern France",
   description:
-    "A short travel memory from Pont d'Arc, Nîmes, and Avignon — natural beauty, old stone streets, gardens, and a few places worth remembering.",
+    "A family road trip from Poland through Germany to Southern France — Pont d'Arc, Nîmes, Avignon, camping fields, and small moments along the way.",
   image: "assets/images/Pont d'Arc.JPG",
   pageUrl: "adventure.html?story=southern-france&view=journey",
   cardUrl: "adventure.html?story=southern-france&view=video",
@@ -36,6 +36,28 @@ const southernFranceJourney = {
   date: "2014-07-01",
 };
 
+function addSouthernFranceStyles() {
+  if (document.getElementById("southern-france-styles")) return;
+  const style = document.createElement("style");
+  style.id = "southern-france-styles";
+  style.textContent = `
+    .sf-story { display: grid; gap: clamp(26px, 5vw, 52px); }
+    .sf-photo { margin: 0; overflow: hidden; border-radius: var(--radius); background: var(--sand-soft); box-shadow: var(--shadow); }
+    .sf-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .sf-wide img { aspect-ratio: 16 / 8; }
+    .sf-row { display: grid; grid-template-columns: minmax(240px, 0.95fr) minmax(0, 1.05fr); gap: clamp(22px, 4vw, 44px); align-items: center; }
+    .sf-row.reverse { grid-template-columns: minmax(0, 1.05fr) minmax(240px, 0.95fr); }
+    .sf-copy { display: grid; gap: 14px; padding: clamp(22px, 4vw, 38px); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+    .sf-copy h3 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.55rem, 2.4vw, 2.25rem); font-weight: 500; line-height: 1.12; color: var(--ink); }
+    .sf-copy p { margin: 0; color: var(--muted); font-size: 1.04rem; line-height: 1.78; }
+    .sf-note { max-width: 760px; margin-inline: auto; padding: clamp(22px, 4vw, 36px); background: rgba(229, 210, 175, 0.22); border-radius: var(--radius); }
+    .sf-note p { margin: 0; color: var(--muted); font-size: 1.06rem; line-height: 1.78; }
+    .sf-note p + p { margin-top: 14px; }
+    @media (max-width: 760px) { .sf-row, .sf-row.reverse { grid-template-columns: 1fr; } .sf-wide img, .sf-photo img { aspect-ratio: 4 / 3; } }
+  `;
+  document.head.append(style);
+}
+
 function renderSouthernFranceDetail() {
   const params = new URLSearchParams(window.location.search);
   if (params.get("story") !== "southern-france") return;
@@ -43,6 +65,7 @@ function renderSouthernFranceDetail() {
   const main = document.querySelector("main.archive-page");
   if (!main) return;
 
+  addSouthernFranceStyles();
   main.classList.add("journey-detail");
   main.textContent = "";
 
@@ -69,25 +92,23 @@ function renderSouthernFranceDetail() {
       <h2>Nature, history, and hidden corners.</h2>
       <p>A quick photo journey through Southern France, from the natural arch of Pont d'Arc to the gardens of Nîmes and the historic streets of Avignon.</p>
     </div>
-    <div class="journey-video-embed" id="southern-france-video"></div>`;
+    <div class="journey-video-embed"><iframe src="https://www.youtube.com/embed/YS4r-pkGBzQ" title="Southern France YouTube Short" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
 
   const readPanel = document.createElement("section");
   readPanel.className = "section journey-section journey-view-panel";
   readPanel.dataset.journeyViewPanel = "read-the-journey";
   readPanel.hidden = true;
   readPanel.innerHTML = `
-    <div class="section-heading"><p class="eyebrow">Read the Journey</p><h2>A summer road trip, remembered in small pieces.</h2></div>
-    <div class="morrow-story">
-      <figure class="morrow-story-hero"><img src="assets/images/Pont d'Arc.JPG" alt="Pont d'Arc natural arch over the Ardèche River in Southern France." /></figure>
-      <div class="morrow-story-intro"><p>In 2014, we packed the car in Poland and drove south through Germany toward France. It was not a light version of travel: two children, ages ten and three, camping gear, and a stroller that still had to come with us almost everywhere.</p><p>Pont d'Arc felt like the wild part of the trip. The natural arch was impressive, but what stayed with me was the river, the cliffs, and the feeling that after many hours on the road we had reached a completely different rhythm.</p></div>
-      <figure class="morrow-story-hero"><img src="assets/images/ogród.jpg" alt="Shaded garden terrace in Nîmes, France." /></figure>
-      <article class="morrow-story-ending"><p>Nîmes gave us shade, stone terraces, green paths, and the kind of pauses that happen naturally when you travel with children. You stop for water, for snacks, for tired legs, and sometimes those stops become the part you remember best.</p></article>
-      <div class="morrow-story-row"><figure class="morrow-story-photo morrow-story-photo-tall"><img src="assets/images/uliczka.JPG" alt="Busy sunlit street with cafés in Southern France." /></figure><article class="morrow-story-copy"><p>Southern French streets have their own pace. Cafés spill into narrow spaces, people sit close together, and the city feels less like a checklist and more like something you slowly pass through, stroller wheels and all.</p></article></div>
-      <div class="morrow-story-row"><article class="morrow-story-copy"><p>Avignon is known for its papal history, but what I remember most is not only the Palace of the Popes. The city felt alive with artists, street performers, small markets, cafés, and people gathering in public squares.</p></article><figure class="morrow-story-photo"><img src="assets/images/Palais des Papes.JPG" alt="The Palais des Papes in Avignon, France." /></figure></div>
-      <figure class="morrow-story-hero"><img src="assets/images/widok na plac.JPG" alt="View over a square in Avignon, France." /></figure>
-      <article class="morrow-story-ending"><p>From above, Avignon looked historic and theatrical at the same time: old walls and rooftops, but also umbrellas, conversations, movement, and daily life happening below.</p></article>
-      <figure class="morrow-story-hero"><img src="assets/images/panorama rzeki.JPG" alt="Panoramic view of the Rhône River near Avignon." /></figure>
-      <article class="morrow-story-ending"><p>Looking back, this trip was not about seeing everything perfectly. It was about driving, camping, carrying bags, pushing the stroller over old stones, and discovering that family travel is rarely smooth — but often memorable because of that.</p><p><strong>Life in Motion.</strong></p></article>
+    <div class="section-heading"><p class="eyebrow">Read the Journey</p><h2>A summer road trip, remembered in small pieces.</h2><p>Not a guidebook version of Southern France, but the version that stayed with me: campsites, long drives, children, old stones, hot streets, and small pauses along the way.</p></div>
+    <div class="sf-story">
+      <div class="sf-row"><figure class="sf-photo"><img src="assets/images/Pont d'Arc.JPG" alt="Pont d'Arc natural arch over the Ardèche River." /></figure><article class="sf-copy"><h3>Pont d'Arc</h3><p>In 2014, we packed the car in Poland and drove south through Germany toward France. It was not a light version of travel: two children, ages ten and three, camping gear, and a stroller that still had to come with us almost everywhere.</p><p>Pont d'Arc felt like the wild part of the trip. The arch was impressive, but what stayed with me was the river, the cliffs, and the feeling that after many hours on the road we had reached a different rhythm.</p></article></div>
+      <div class="sf-row reverse"><article class="sf-copy"><h3>Nîmes</h3><p>Nîmes gave us shade, stone terraces, green paths, and the kind of pauses that happen naturally when you travel with children.</p><p>You stop for water, for snacks, for tired legs, and sometimes those stops become the part you remember best.</p></article><figure class="sf-photo"><img src="assets/images/ogród.jpg" alt="Shaded garden terrace in Nîmes." /></figure></div>
+      <div class="sf-row"><figure class="sf-photo"><img src="assets/images/uliczka.JPG" alt="Busy street with cafés in Southern France." /></figure><article class="sf-copy"><h3>Between cafés and stroller wheels</h3><p>Southern French streets have their own pace. Cafés spill into narrow spaces, people sit close together, and the city feels less like a checklist and more like something you slowly pass through.</p><p>With a stroller, you notice different things: shade, curbs, small squares, and where everyone else has decided to stop for a while.</p></article></div>
+      <div class="sf-row reverse"><article class="sf-copy"><h3>Avignon</h3><p>Avignon is known for its papal history, but what I remember most is not only the Palace of the Popes.</p><p>The city felt alive with artists, street performers, small markets, cafés, and people gathering in public squares. The history was there, but the present was just as visible.</p></article><figure class="sf-photo"><img src="assets/images/Palais des Papes.JPG" alt="The Palais des Papes in Avignon." /></figure></div>
+      <figure class="sf-photo sf-wide"><img src="assets/images/widok na plac.JPG" alt="View over a square in Avignon." /></figure>
+      <article class="sf-note"><p>From above, Avignon looked historic and theatrical at the same time: old walls and rooftops, but also umbrellas, conversations, movement, and daily life happening below.</p></article>
+      <figure class="sf-photo sf-wide"><img src="assets/images/panorama rzeki.JPG" alt="Panoramic view of the Rhône River near Avignon." /></figure>
+      <article class="sf-note"><p>Looking back, this trip was not about seeing everything perfectly. It was about driving, camping, carrying bags, pushing the stroller over old stones, and discovering that family travel is rarely smooth — but often memorable because of that.</p><p><strong>Life in Motion.</strong></p></article>
     </div>`;
 
   const back = document.createElement("section");
@@ -95,13 +116,6 @@ function renderSouthernFranceDetail() {
   back.innerHTML = `<a class="text-link" href="adventure.html">&larr; Back to Adventure Archive</a>`;
 
   main.append(hero, videoPanel, readPanel, back);
-
-  const frame = document.createElement("iframe");
-  frame.src = "https://www.youtube.com/embed/YS4r-pkGBzQ";
-  frame.title = "Southern France YouTube Short";
-  frame.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share";
-  frame.allowFullscreen = true;
-  document.getElementById("southern-france-video").append(frame);
 
   const buttons = main.querySelectorAll("[data-journey-view-button]");
   const panels = main.querySelectorAll("[data-journey-view-panel]");
