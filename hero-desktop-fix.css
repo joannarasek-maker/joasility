@@ -1,0 +1,18 @@
+/* Restore desktop hero framing without changing the approved mobile crop. */
+@media (min-width: 641px) {
+  .hero {
+    background-position: center 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    background-position: center 24%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    background-position: 53% 60%;
+  }
+}
