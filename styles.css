@@ -124,11 +124,8 @@ a {
   background-image: url("assets/images/joasility-bridge-hero-web.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
-  /* pokazuje więcej mostu i nieba */
-  background-position: center 82%;
+  background-position: center 74%;
 }
-
 .hero-overlay {
   position: absolute;
   inset: 0;
