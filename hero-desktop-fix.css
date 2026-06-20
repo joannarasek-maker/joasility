@@ -1,11 +1,18 @@
-/* Desktop/tablet: show the same full hero composition as the approved mobile reference,
-   with sky, mountains, and bridge visible. Mobile remains unchanged. */
+/* Desktop/tablet: keep the hero photo natural, not stretched.
+   The crop is balanced to show the bridge while keeping more of the mountain/sky area.
+   Mobile keeps the approved reference crop. */
 @media (min-width: 641px) {
   .hero {
     min-height: 94vh !important;
-    background-size: 100% 100% !important;
-    background-position: center center !important;
+    background-size: cover !important;
+    background-position: 53% 62% !important;
     background-repeat: no-repeat !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    background-position: 53% 62% !important;
   }
 }
 
