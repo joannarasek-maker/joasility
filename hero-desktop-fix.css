@@ -1,12 +1,17 @@
-/* Desktop hero: keep the photo natural and show the full vertical composition
-   so the sky, mountains, and bridge are all visible. No stretching. */
+/* Desktop hero: natural proportions, no stretching.
+   Balanced crop to show both the bridge and some sky/mountain area. */
 @media (min-width: 641px) {
   .hero {
     min-height: 94vh;
-    background-size: auto 100%;
-    background-position: center center;
+    background-size: cover;
+    background-position: 53% 42%;
     background-repeat: no-repeat;
-    background-color: #20382b;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    background-position: 53% 42%;
   }
 }
 
