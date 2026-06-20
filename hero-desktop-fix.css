@@ -2,22 +2,25 @@
    Mobile keeps the approved crop from the reference screenshot. */
 @media (min-width: 641px) {
   .hero {
-    min-height: 100vh;
-    background-size: cover;
-    background-position: 53% 68%;
+    min-height: 94vh;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }
 
 @media (min-width: 1200px) {
   .hero {
-    min-height: 100vh;
-    background-size: cover;
-    background-position: 53% 68%;
+    min-height: 94vh;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }
 
 @media (max-width: 640px) {
   .hero {
+    background-size: cover;
     background-position: 53% 60%;
   }
 }
