@@ -1,26 +1,17 @@
-/* Desktop/tablet framing: show the full composition with sky, mountains, and bridge.
-   Mobile keeps the approved crop from the reference screenshot. */
+/* Desktop/tablet: show the same full hero composition as the approved mobile reference,
+   with sky, mountains, and bridge visible. Mobile remains unchanged. */
 @media (min-width: 641px) {
   .hero {
-    min-height: 94vh;
-    background-size: 100% 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-}
-
-@media (min-width: 1200px) {
-  .hero {
-    min-height: 94vh;
-    background-size: 100% 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
+    min-height: 94vh !important;
+    background-size: 100% 100% !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
   }
 }
 
 @media (max-width: 640px) {
   .hero {
-    background-size: cover;
-    background-position: 53% 60%;
+    background-size: cover !important;
+    background-position: 53% 60% !important;
   }
 }
