@@ -1,5 +1,5 @@
 // Centralized Movement archive data.
-// Safe migration branch only. Not yet connected to rendering.
+// Safe migration branch only.
 
 const movementArchiveData = [
   {
@@ -31,9 +31,19 @@ const movementArchiveData = [
     description: "Morning mobility routine focused on gentle movement, joint health, and starting the day well.",
     image: "assets/images/morning-mobility-flow-thumbnail.png",
     cardUrl: "morning-mobility-flow.html",
+    videoUrl: "https://www.youtube.com/shorts/ro2uybn-WdQ",
+    videoActionUrl: "morning-mobility-flow.html",
     category: "Movement",
     tags: ["Mobility", "Morning Routine", "Movement"],
-    dateLabel: "2026",
-    date: "2026-01-01"
+    dateLabel: "May 2026",
+    date: "2026-05-01"
   }
 ];
+
+if (typeof archiveCollections !== "undefined") {
+  archiveCollections.movement = movementArchiveData;
+}
+
+if (document.getElementById("category-archive") && typeof renderCategoryArchive === "function") {
+  renderCategoryArchive();
+}
