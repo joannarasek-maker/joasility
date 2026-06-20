@@ -1,5 +1,8 @@
-@media (min-width: 641px) {
+@media (min-width: 769px) {
   .hero {
-    background-position: center 68%;
+    background-image: url("assets/images/Hero.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }
