@@ -1,14 +1,18 @@
-/* Restore the original balanced hero framing: mountain/sky plus bridge.
-   Keep the approved mobile crop unchanged. */
+/* Desktop/tablet framing: show the full composition with sky, mountains, and bridge.
+   Mobile keeps the approved crop from the reference screenshot. */
 @media (min-width: 641px) {
   .hero {
-    background-position: center 57%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: 53% 68%;
   }
 }
 
 @media (min-width: 1200px) {
   .hero {
-    background-position: center 57%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: 53% 68%;
   }
 }
 
