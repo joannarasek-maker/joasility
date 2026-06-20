@@ -12,6 +12,20 @@ const aFewMinutesOfMovement = {
   date: "2026-06-12",
 };
 
+const movementCanChangeYourDay = {
+  title: "A few minutes of movement can change your day",
+  description:
+    "A quick warm-up and movement note from a Senior Fitness class.",
+  image: "https://img.youtube.com/vi/E61Stq7D8rQ/hqdefault.jpg",
+  cardUrl: "movement-can-change-your-day.html",
+  videoUrl: "https://www.youtube.com/shorts/E61Stq7D8rQ",
+  videoActionUrl: "movement-can-change-your-day.html",
+  category: "Movement",
+  tags: ["Senior Fitness", "Strength", "Movement", "Life in Motion"],
+  dateLabel: "June 2026",
+  date: "2026-06-20",
+};
+
 if (typeof movementData !== "undefined") {
   const morningMobilityFlow = movementData.find((item) => item.videoUrl === "https://www.youtube.com/shorts/ro2uybn-WdQ");
   if (morningMobilityFlow) {
@@ -20,6 +34,10 @@ if (typeof movementData !== "undefined") {
 
   if (!movementData.some((item) => item.videoUrl === aFewMinutesOfMovement.videoUrl)) {
     movementData.unshift(aFewMinutesOfMovement);
+  }
+
+  if (!movementData.some((item) => item.videoUrl === movementCanChangeYourDay.videoUrl)) {
+    movementData.unshift(movementCanChangeYourDay);
   }
 
   renderCategoryArchive();
