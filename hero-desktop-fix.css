@@ -1,13 +1,14 @@
-/* Restore desktop hero framing without changing the approved mobile crop. */
+/* Balance the desktop hero crop so both the mountain/sky and bridge remain visible.
+   Keep the approved mobile crop unchanged. */
 @media (min-width: 641px) {
   .hero {
-    background-position: center 30%;
+    background-position: 53% 43%;
   }
 }
 
 @media (min-width: 1200px) {
   .hero {
-    background-position: center 24%;
+    background-position: 53% 43%;
   }
 }
 
