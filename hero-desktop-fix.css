@@ -1,19 +1,12 @@
-/* Desktop hero: keep natural proportions and move the crop toward the original mobile reference.
-   This cannot show the exact same portrait crop on a wide screen, but it restores more sky
-   while keeping the bridge visible and avoids any stretching. */
+/* Desktop hero: keep the photo natural and show the full vertical composition
+   so the sky, mountains, and bridge are all visible. No stretching. */
 @media (min-width: 641px) {
   .hero {
-    min-height: 120vh;
-    background-size: cover;
-    background-position: 53% 60%;
+    min-height: 94vh;
+    background-size: auto 100%;
+    background-position: center center;
     background-repeat: no-repeat;
-  }
-}
-
-@media (min-width: 1200px) {
-  .hero {
-    min-height: 120vh;
-    background-position: 53% 60%;
+    background-color: #20382b;
   }
 }
 
