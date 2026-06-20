@@ -120,9 +120,13 @@ a {
   padding: 124px clamp(18px, 6vw, 80px) 64px;
   align-items: end;
   color: #fff;
+
   background-image: url("assets/images/joasility-bridge-hero-web.jpg");
-  background-position: center 57%;
+  background-repeat: no-repeat;
   background-size: cover;
+
+  /* pokazuje więcej mostu i nieba */
+  background-position: center 72%;
 }
 
 .hero-overlay {
