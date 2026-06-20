@@ -1,18 +1,12 @@
-/* Desktop/tablet: keep the hero photo natural, not stretched.
-   The crop is balanced to show the bridge while keeping more of the mountain/sky area.
+/* Desktop/tablet: natural hero photo, no stretching.
+   Use the original cover behavior with a slightly higher crop so the image does not look distorted.
    Mobile keeps the approved reference crop. */
 @media (min-width: 641px) {
   .hero {
     min-height: 94vh !important;
     background-size: cover !important;
-    background-position: 53% 62% !important;
+    background-position: center 57% !important;
     background-repeat: no-repeat !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .hero {
-    background-position: 53% 62% !important;
   }
 }
 
