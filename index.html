@@ -6,58 +6,41 @@
     <title>Joasility | Life in Motion</title>
     <meta
       name="description"
-      content="Joasility is a personal lifestyle journal documenting journeys, nature, wildlife, simple food, movement, and reflections from around the world."
+      content="Joasility is a personal travel journal documenting journeys, nature, wildlife, and reflections from active exploration near and far."
     />
     <meta property="og:title" content="Joasility | Life in Motion" />
     <meta
       property="og:description"
-      content="Exploring journeys, nature, movement, and simple living."
+      content="Journeys, nature, wildlife, and reflections from active exploration."
     />
     <meta property="og:image" content="assets/images/joasility-bridge-hero-web.jpg" />
     <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="styles.css?v=20260608-nutrition-card-mobile" />
+    <link rel="stylesheet" href="styles.css?v=20260623-journeys-nature-reflections" />
     <link rel="stylesheet" href="contact-compact.css?v=20260612" />
     <link rel="stylesheet" href="hero-reset.css?v=20260620" />
     <style>
       @media (min-width: 981px) {
-        #journeys,
-        #movement {
+        #journeys {
           width: min(1320px, calc(100% - 36px));
         }
 
-        #nature,
-        #nutrition {
+        #nature {
           padding-inline: max(18px, calc((100% - 1320px) / 2));
         }
 
-        .nature-section .wide-card-grid,
-        #movement-grid,
-        #recipes-grid {
+        .nature-section .wide-card-grid {
           grid-template-columns: minmax(0, 1fr);
         }
 
         .journey-category,
         .category-gateway-card.nature-notes,
-        .category-gateway-card.movement,
-        .category-gateway-card.nutrition {
+        .category-gateway-card.reflections {
           min-height: clamp(520px, 44vw, 620px);
         }
 
-        #nature-grid .category-gateway-card.nature-notes,
-        #movement-grid .category-gateway-card.movement,
-        #recipes-grid .category-gateway-card.nutrition {
+        #nature-grid .category-gateway-card.nature-notes {
           min-height: clamp(560px, 48vw, 680px);
         }
-      }
-
-      .category-gateway-card.movement .card-image img,
-      #youtube-playlists .playlist-card:nth-child(2) .playlist-thumbnail img {
-        object-position: 54% 52%;
-      }
-
-      .category-gateway-card.nutrition .card-image img,
-      #youtube-playlists .playlist-card:nth-child(4) .playlist-thumbnail img {
-        object-position: 58% 54%;
       }
     </style>
   </head>
@@ -76,8 +59,6 @@
         <a href="#home">Home</a>
         <a href="#journeys">Journeys</a>
         <a href="#nature">Nature & Wildlife</a>
-        <a href="#movement">Movement</a>
-        <a href="#nutrition">Nutrition</a>
         <a href="#reflections">Reflections</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -90,8 +71,8 @@
         <div class="hero-content">
           <p class="hero-kicker">Life in Motion</p>
           <h1>JOASILITY</h1>
-          <p class="hero-keywords">Travel &bull; Nature &bull; Movement &bull; Curiosity</p>
-          <p>Exploring journeys, nature, movement, and simple living.</p>
+          <p class="hero-keywords">Journeys &bull; Nature &bull; Reflections</p>
+          <p>Active travel, quiet nature, and stories gathered along the way.</p>
           <div class="hero-actions">
             <a class="button primary" href="#journeys">Explore Journeys</a>
             <a
@@ -109,13 +90,12 @@
 
       <section class="intro-band" aria-labelledby="intro-title">
         <div class="intro-copy">
-          <p class="eyebrow">Travel. Nature. Curiosity.</p>
+          <p class="eyebrow">Journeys. Nature. Reflections.</p>
           <h2 id="intro-title">A personal exploration project with journeys at the center.</h2>
         </div>
         <p>
-          Joasility follows paths near and far: quiet local walks, mountain weekends, larger
-          travel stories, wildlife observations, simple meals, movement, and reflections from
-          life outdoors.
+          Joasility follows paths near and far: local walks, mountain weekends, bike rides,
+          hikes, travel stories, wildlife observations, and reflections from life outdoors.
         </p>
       </section>
 
@@ -135,8 +115,7 @@
           <p class="eyebrow">YouTube Playlists</p>
           <h2 id="playlists-title">Watch by theme.</h2>
           <p>
-            Video collections organized around Joasility journeys, movement, nature, food, and
-            future stories.
+            Video collections organized around Joasility journeys, nature, wildlife, and future stories.
           </p>
         </div>
         <div class="playlist-grid" id="youtube-playlists"></div>
@@ -153,32 +132,6 @@
         </div>
         <div class="wide-card-grid" id="nature-grid"></div>
         <div class="section-link-row" id="nature-all-link"></div>
-      </section>
-
-      <section class="section quieter-section" id="movement" aria-labelledby="movement-title">
-        <div class="section-heading compact-heading">
-          <p class="eyebrow">Movement</p>
-          <h2 id="movement-title">Movement as part of an active life.</h2>
-          <p>
-            Yoga, mobility, fitness, senior-friendly movement, and everyday activity that
-            supports travel, walking, and feeling at home in the body.
-          </p>
-        </div>
-        <div class="small-card-grid" id="movement-grid"></div>
-        <div class="section-link-row" id="movement-all-link"></div>
-      </section>
-
-      <section class="section food-section" id="nutrition" aria-labelledby="nutrition-title">
-        <div class="section-heading">
-          <p class="eyebrow">Nutrition</p>
-          <h2 id="nutrition-title">Simple food for days in motion.</h2>
-          <p>
-            Practical meals, homemade food, trail-friendly ideas, and recipes that fit active,
-            curious living.
-          </p>
-        </div>
-        <div class="card-grid" id="recipes-grid"></div>
-        <div class="section-link-row" id="recipes-all-link"></div>
       </section>
 
       <section class="section reflections-section" id="reflections" aria-labelledby="reflections-title">
@@ -212,7 +165,7 @@
             Joasility is where I collect some of those experiences through photos, videos and notes.
           </p>
           <p>
-            You will also find movement, simple recipes and everyday moments that help me stay healthy and active. Not because fitness is the goal, but because I want to keep exploring the world for as long as possible.
+            Movement is part of these stories naturally: walking through cities, hiking mountain trails, cycling quiet roads, paddling on the water, and staying curious enough to keep exploring.
           </p>
           <p>
             I am not trying to be an expert, influencer or travel guide.
@@ -256,30 +209,7 @@
       </p>
     </footer>
 
-    <script src="script.js?v=20260608-nutrition-card-mobile"></script>
+    <script src="script.js?v=20260623-journeys-nature-reflections"></script>
     <script src="script-fix.js?v=20260613-millet-fix"></script>
-    <script>
-      (() => {
-        const images = {
-          "#movement-grid .category-gateway-card.movement .card-image img": "assets/images/IMG-20231007-WA0002.jpg",
-          "#recipes-grid .category-gateway-card.nutrition .card-image img": "assets/images/sniadanie.png",
-          "#youtube-playlists .playlist-card:nth-child(2) .playlist-thumbnail img": "assets/images/IMG-20231007-WA0002.jpg",
-          "#youtube-playlists .playlist-card:nth-child(4) .playlist-thumbnail img": "assets/images/sniadanie.png",
-        };
-
-        const applyCategoryImages = () => {
-          Object.entries(images).forEach(([selector, source]) => {
-            const image = document.querySelector(selector);
-            if (image) image.src = source;
-          });
-        };
-
-        if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", applyCategoryImages);
-        } else {
-          applyCategoryImages();
-        }
-      })();
-    </script>
   </body>
 </html>
