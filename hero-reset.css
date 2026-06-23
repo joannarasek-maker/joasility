@@ -6,3 +6,10 @@
     background-repeat: no-repeat;
   }
 }
+
+/* Hide the old homepage YouTube playlist block after the Joasility focus update. */
+.playlist-section,
+#playlists,
+#youtube-playlists {
+  display: none !important;
+}
