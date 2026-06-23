@@ -123,46 +123,11 @@ const natureData = [
   },
 ];
 
-const movementData = [
-  {
-    title: "Morning Mobility Flow",
-    description:
-      "A short movement session focused on mobility, balance, and keeping the body moving through everyday life.",
-    image: "https://img.youtube.com/vi/ro2uybn-WdQ/hqdefault.jpg",
-    cardUrl: "morning-mobility-flow.html",
-    videoUrl: "https://www.youtube.com/shorts/ro2uybn-WdQ",
-    videoActionUrl: "morning-mobility-flow.html",
-    category: "Movement",
-    tags: ["Mobility", "Movement", "Active Living", "Everyday Motion"],
-    dateLabel: "May 2026",
-    date: "2026-05-01",
-  },
-];
-
-const recipesData = [
-  {
-    title: "Turkey Spaghetti",
-    description:
-      "A simple, comforting turkey spaghetti made with ground turkey, tomato sauce, garlic, onion, basil, and parmesan. Easy enough for an everyday family dinner, but still balanced and protein-rich.",
-    image: "https://img.youtube.com/vi/rQ7e0wvlTPY/hqdefault.jpg",
-    pageUrl: "turkey-spaghetti.html?view=recipe",
-    cardUrl: "turkey-spaghetti.html?view=recipe",
-    pageActionUrl: "turkey-spaghetti.html?view=recipe",
-    videoUrl: "https://www.youtube.com/shorts/rQ7e0wvlTPY",
-    videoActionUrl: "turkey-spaghetti.html?view=video",
-    imageLinksToVideo: true,
-    category: "Nutrition",
-    tags: ["Everyday Recipes", "Turkey", "Protein-rich", "Family Dinner"],
-    dateLabel: "May 2026",
-    date: "2026-05-01",
-  },
-];
-
 const reflectionsData = [
   {
     title: "Why Joasility?",
     description:
-      "A personal note about travel journals, movement, food, imperfect creation, and why these gathered moments matter.",
+      "A personal note about travel journals, active exploration, imperfect creation, and why these gathered moments matter.",
     image: "assets/images/why-joasility-exists.jpg",
     pageUrl: "why-joasility-exists.html",
     category: "Reflections",
@@ -181,20 +146,6 @@ const homepageCategoryData = {
     archiveUrl: "nature-wildlife.html",
     tags: ["Birds", "Wildlife", "Plants", "Nature Notes"],
   },
-  movement: {
-    title: "Movement",
-    description: "Yoga, mobility, fitness, senior-friendly movement, and everyday activity for life in motion.",
-    image: "assets/images/movement-cycling.jpg",
-    archiveUrl: "movement.html",
-    tags: ["Yoga", "Mobility", "Fitness", "Everyday Activity"],
-  },
-  nutrition: {
-    title: "Nutrition",
-    description: "Simple food, practical meals, homemade recipes, and trail-friendly ideas.",
-    image: "assets/images/millet-breakfast-bowl.jpg",
-    archiveUrl: "nutrition.html",
-    tags: ["Simple Food", "Recipes", "Quick Meals", "Homemade"],
-  },
   reflections: {
     title: "Reflections",
     description: "Thoughts, lessons, and stories gathered along the way.",
@@ -207,31 +158,19 @@ const homepageCategoryData = {
 
 const archiveCollections = {
   "nature-wildlife": natureData,
-  movement: movementData,
-  nutrition: recipesData,
   reflections: reflectionsData,
 };
 
 const youtubePlaylistsData = [
   {
-    title: "Travel",
+    title: "Journeys",
     url: "https://www.youtube.com/@Joasility/playlists",
     thumbnail: journeyImages.adventure,
-  },
-  {
-    title: "Movement",
-    url: "https://www.youtube.com/@Joasility/playlists",
-    thumbnail: homepageCategoryData.movement.image,
   },
   {
     title: "Nature & Wildlife",
     url: "https://www.youtube.com/@Joasility/playlists",
     thumbnail: homepageCategoryData.nature.image,
-  },
-  {
-    title: "Nutrition",
-    url: "https://www.youtube.com/@Joasility/playlists",
-    thumbnail: homepageCategoryData.nutrition.image,
   },
 ];
 
@@ -267,7 +206,7 @@ function cardTemplate(item) {
   const cardTarget = cardHref === videoHref && !item.videoActionUrl ? ` target="_blank" rel="noopener noreferrer"` : "";
   const cardLabel = item.cardAriaLabel || (item.pageUrl ? `Open ${item.title}` : `Watch ${item.title}`);
   const pageAction = pageHref
-    ? `<a class="video-link" href="${pageHref}">${item.pageActionLabel || "View Recipe"}</a>`
+    ? `<a class="video-link" href="${pageHref}">${item.pageActionLabel || "Read the Journey"}</a>`
     : "";
   const videoAction = videoHref
     ? `<a class="video-link" href="${videoHref}"${item.videoActionUrl ? "" : ` target="_blank" rel="noopener noreferrer"`}>${item.videoActionLabel || "Watch Video"}</a>`
@@ -452,8 +391,6 @@ function renderHomepageCategory(targetId, category, linkTargetId) {
 
 renderCards("journey-categories", journeyCategoriesData, journeyCategoryTemplate);
 renderHomepageCategory("nature-grid", homepageCategoryData.nature, "nature-all-link");
-renderHomepageCategory("movement-grid", homepageCategoryData.movement, "movement-all-link");
-renderHomepageCategory("recipes-grid", homepageCategoryData.nutrition, "recipes-all-link");
 renderHomepageCategory("reflections-list", homepageCategoryData.reflections, "reflections-all-link");
 renderCards("youtube-playlists", youtubePlaylistsData, playlistCardTemplate);
 renderCategoryArchive();
